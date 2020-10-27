@@ -3,7 +3,7 @@ $theme-colors: (
     "secondary": #64696f,
     "dark": #000000
 );
-
+$primary: #ff7f32;
 
 @import "node_modules/bootstrap/scss/bootstrap";
 
@@ -35,7 +35,11 @@ $theme-colors: (
 
 
 body {
-	font-family: MuseoSans-700;
+	font-size: 1.1rem;
+	font-family: MuseoSans-500;
+}
+a {
+	transition: all 0.3s ease;
 }
 
 h1,h2,h3 {
@@ -45,24 +49,37 @@ h4,h5,h6 {
 	font-family: MuseoSans-700;
 }
 
+.btn {
+	border-radius: 0;
+	border-width: 3px;
+	padding: 0.5rem 1.2rem;
+	font-size: 1.4rem;
+	font-family: MuseoSans-900;
+}
 .border-text {
 	display: inline;
 	border: solid 5px $dark;
 }
+
+.border {
+	border-width: 2px !important;
+}
 .jumbotron {
+	padding: 7rem 0;
 	position: relative;
 	.copy {
 		z-index: 2;
 		position: relative;
 	}
 	h1 {
+		font-size: 5.5rem;
 		padding: 0 0.2em;
 	}
 	h2 {
-		font-size: 3.5rem;
+		font-size: 4.5rem;
 	}
 	h3 {
-		font-size: 2rem;
+		font-size: 3rem;
 	}
 
 	.upskill-feature {
@@ -71,10 +88,14 @@ h4,h5,h6 {
 	    bottom: 20px;
 	    position: absolute;
 	    z-index: 0;
-	    font-size: 16rem;
+	    font-size: 22.5rem;
 	    color: #fff;
 	    display: block;
 	    line-height: 1;
+
+	    @include media-breakpoint-down(md) {
+	    	font-size: 16rem;
+	    }
 	}
 }
 
@@ -83,6 +104,34 @@ h4,h5,h6 {
 .navbar-brand {
 	img {
 		max-width: 175px;
+	}
+}
+
+
+// Courses Section
+
+.section-courses, .section-sponsors, .section-intro {
+	.container {
+		padding: 5rem 0;
+	}
+}
+.course-teaser {
+	margin-bottom: 2rem;
+	min-height: 200px;
+	.border-text {
+		padding: 0 0.3em;
+		border: solid 2px $primary;
+	}
+
+	.register {
+		display: block;
+		font-size: 1.7rem;
+		font-family: MuseoSans-900;
+		color: $dark;
+		&:hover {
+			color: $white;
+			text-decoration: none;
+		}
 	}
 }
 
