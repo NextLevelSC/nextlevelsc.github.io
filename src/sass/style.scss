@@ -64,6 +64,99 @@ h4,h5,h6 {
 .border {
 	border-width: 2px !important;
 }
+
+
+// Hamburger Menu
+
+$background: #fff;
+$color: $dark;
+
+$height-icon: 30px;
+$width-line: 50px;
+$height-line: 3px;
+
+$transition-time: 0.4s;
+$rotation: 45deg;
+$translateY: ($height-icon / 2);
+$translateX: 0;
+
+.navbar-toggler {
+  margin-left: 1.5em;
+  border: none;
+  border-radius: 0;
+  width:$width-line;
+  height:$height-icon;
+  position:relative;
+  display:block;
+ // margin: ($height-icon * 2) auto $height-icon auto;
+  &:focus {
+  	outline: none;
+  }
+  .line {
+    display:block;
+    background:$color;
+    width:$width-line;
+    height:$height-line;
+    position:absolute;
+    left:0;
+    border-radius: 0;
+    transition: all $transition-time;
+    -webkit-transition: all $transition-time;
+    -moz-transition: all $transition-time;
+    
+    &.line-1 {
+      top:0;
+    }
+    &.line-2 {
+      left: 20%;
+      top:50%;
+    }
+    &.line-3 {
+      top:100%;
+      left: 40%;
+    }
+  }
+  &:hover, &:focus {
+     .line-1 {
+        transform: translateY($height-line / 2 * -1);
+        -webkit-transform: translateY($height-line / 2 * -1);
+        -moz-transform: translateY($height-line / 2 * -1);
+     }
+    .line-3 {
+        transform: translateY($height-line / 2);
+        -webkit-transform: translateY($height-line / 2);
+        -moz-transform: translateY($height-line / 2);
+    }  
+  }
+  &.active {
+    .line-1 {
+      transform: translateY($translateY) translateX($translateX) rotate($rotation);
+      -webkit-transform: translateY($translateY) translateX($translateX) rotate($rotation);
+      -moz-transform: translateY($translateY) translateX($translateX) rotate($rotation);
+    }
+    .line-2 {
+      opacity:0;
+    }
+    .line-3 {
+      transform: translateY($translateY * -1) translateX($translateX) rotate($rotation * -1);
+      -webkit-transform: translateY($translateY * -1) translateX($translateX) rotate($rotation * -1);
+      -moz-transform: translateY($translateY * -1) translateX($translateX) rotate($rotation * -1);
+      left: 0;
+    }
+  }
+}
+#navBar {
+	position: absolute;
+    top: 5em;
+    left: 2.5em;
+    background: white;
+    z-index: 99;
+    a {
+    	padding: 0.5em 1rem;
+    	font-size: 1rem;
+    	font-family: MuseoSans-700;
+    }
+}
 .jumbotron {
 	padding: 7rem 0;
 	position: relative;
@@ -103,7 +196,8 @@ h4,h5,h6 {
 
 .navbar-brand {
 	img {
-		max-width: 175px;
+		max-width: 165px;
+		padding: 1em 0;
 	}
 }
 
@@ -113,11 +207,19 @@ h4,h5,h6 {
 .section-courses, .section-sponsors, .section-intro {
 	.container {
 		padding: 5rem 0;
+
+		@include media-breakpoint-down(md) {
+			padding: 5rem 1rem;
+		}
 	}
 }
 .course-teaser {
 	margin-bottom: 2rem;
 	min-height: 200px;
+
+	@include media-breakpoint-down(md) {
+		min-height: 0;
+	}
 	.border-text {
 		padding: 0 0.3em;
 		border: solid 2px $primary;
@@ -141,6 +243,11 @@ h4,h5,h6 {
 	img {
 		max-height: 100px;
 		width: auto;
+	}
+
+	@include media-breakpoint-down(md) {
+		flex-wrap: wrap;
+		justify-content: center;
 	}
 }
 .footer {
