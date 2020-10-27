@@ -1,0 +1,42 @@
+/**
+ * @license
+ * MyFonts Webfont Build ID 3964858, 2020-10-25T20:25:56-0400
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: MuseoSans-700 by exljbris
+ * URL: https://www.myfonts.com/fonts/exljbris/museo-sans/700/
+ * 
+ * Webfont: MuseoSans-500 by exljbris
+ * URL: https://www.myfonts.com/fonts/exljbris/museo-sans/500/
+ * 
+ * Webfont: MuseoSans-900 by exljbris
+ * URL: https://www.myfonts.com/fonts/exljbris/museo-sans/900/
+ * 
+ * 
+ * Webfonts copyright: Copyright (c) 2008 by Jos Buivenga. All rights reserved.
+ * 
+ * © 2020 MyFonts Inc
+*/
+
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/3c7fba");
+  
+@font-face {
+  font-family: 'MuseoSans-700';
+  src: url('webFonts/MuseoSans-700/font.woff2') format('woff2'), url('webFonts/MuseoSans-700/font.woff') format('woff');
+}
+@font-face {
+  font-family: 'MuseoSans-500';
+  src: url('webFonts/MuseoSans-500/font.woff2') format('woff2'), url('webFonts/MuseoSans-500/font.woff') format('woff');
+}
+@font-face {
+  font-family: 'MuseoSans-900';
+  src: url('webFonts/MuseoSans-900/font.woff2') format('woff2'), url('webFonts/MuseoSans-900/font.woff') format('woff');
+}
+

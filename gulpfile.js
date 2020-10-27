@@ -54,6 +54,10 @@ function img() {
         .pipe(gulpIf(isProd, imagemin()))
         .pipe(gulp.dest('docs/img/'));
 }
+function webfonts() {
+    return gulp.src('src/webfonts/*/*.{ttf,woff,woff2,eof,svg}')
+        .pipe(gulp.dest('docs/webfonts/'));
+}
 
 function serve() {
     browserSync.init({
@@ -86,5 +90,5 @@ exports.css = css;
 exports.html = html;
 exports.js = js;
 exports.del = del;
-exports.serve = gulp.parallel(html, css, js, img, watchFiles, serve);
-exports.default = gulp.series(del, html, css, js, img);
+exports.serve = gulp.parallel(html, css, js, img, webfonts, watchFiles, serve);
+exports.default = gulp.series(del, html, css, js, img, webfonts);
