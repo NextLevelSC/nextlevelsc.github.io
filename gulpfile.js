@@ -56,7 +56,7 @@ function img() {
 }
 function webfonts() {
     return gulp.src('src/webfonts/*/*.{ttf,woff,woff2,eof,svg}')
-        .pipe(gulp.dest('docs/webfonts/'));
+        .pipe(gulp.dest('docs/css/webfonts/'));
 }
 
 function serve() {
