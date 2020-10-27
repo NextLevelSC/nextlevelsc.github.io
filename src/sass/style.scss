@@ -11,15 +11,15 @@ $primary: #ff7f32;
   
 @font-face {
   font-family: 'MuseoSans-700';
-  src: url('../webFonts/MuseoSans-700.woff2') format('woff2'), url('../webFonts/MuseoSans-700.woff') format('woff');
+  src: url('./webFonts/MuseoSans-700.woff2') format('woff2'), url('./webFonts/MuseoSans-700.woff') format('woff');
 }
 @font-face {
   font-family: 'MuseoSans-500';
-  src: url('../webFonts/MuseoSans-500.woff2') format('woff2'), url('../webFonts/MuseoSans-500.woff') format('woff');
+  src: url('./webFonts/MuseoSans-500.woff2') format('woff2'), url('./webFonts/MuseoSans-500.woff') format('woff');
 }
 @font-face {
   font-family: 'MuseoSans-900';
-  src: url('../webFonts/MuseoSans-900.woff2') format('woff2'), url('../webFonts/MuseoSans-900.woff') format('woff');
+  src: url('./webFonts/MuseoSans-900.woff2') format('woff2'), url('./webFonts/MuseoSans-900.woff') format('woff');
 }
 
 .MuseoSans-900 { 
