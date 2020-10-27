@@ -25,7 +25,7 @@ function html() {
         .pipe(gulpIf(isProd, htmlmin({
             collapseWhitespace: true
         })))
-        .pipe(gulp.dest('docs'));
+        .pipe(gulp.dest('./'));
 }
 
 function css() {
@@ -36,7 +36,7 @@ function css() {
         }).on('error', sass.logError))
         .pipe(gulpIf(!isProd, sourcemaps.write()))
         .pipe(gulpIf(isProd, cssmin()))
-        .pipe(gulp.dest('docs/css/'));
+        .pipe(gulp.dest('./css/'));
 }
 
 function js() {
@@ -46,23 +46,23 @@ function js() {
         }))
         .pipe(concat('all.js'))
         .pipe(gulpIf(isProd, uglify()))
-        .pipe(gulp.dest('docs/js'));
+        .pipe(gulp.dest('./js'));
 }
 
 function img() {
     return gulp.src('src/img/*')
         .pipe(gulpIf(isProd, imagemin()))
-        .pipe(gulp.dest('docs/img/'));
+        .pipe(gulp.dest('./img/'));
 }
 function webfonts() {
-    return gulp.src('src/webfonts/*/*.{ttf,woff,woff2,eof,svg}')
-        .pipe(gulp.dest('docs/webfonts/'));
+    return gulp.src('src/webfonts/*/*.{ttf,woff,eof,svg}')
+        .pipe(gulp.dest('./webfonts/'));
 }
 
 function serve() {
     browserSync.init({
         open: true,
-        server: './docs'
+        server: './'
     });
 }
 
@@ -91,4 +91,4 @@ exports.html = html;
 exports.js = js;
 exports.del = del;
 exports.serve = gulp.parallel(html, css, js, img, webfonts, watchFiles, serve);
-exports.default = gulp.series(del, html, css, js, img, webfonts);
+exports.default = gulp.series(html, css, js, img, webfonts);
