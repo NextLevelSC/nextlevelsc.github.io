@@ -158,8 +158,10 @@ $translateX: 0;
     }
 }
 .jumbotron {
-	padding: 8rem 0;
+	padding: 10rem 0;
 	position: relative;
+	overflow: hidden;
+
 	.copy {
 		z-index: 2;
 		position: relative;
@@ -178,7 +180,7 @@ $translateX: 0;
 	.upskill-feature {
 		font-family: MuseoSans-900;
 	    left: 33%;
-	    bottom: 20px;
+	    bottom: 60px;
 	    position: absolute;
 	    z-index: 0;
 	    font-size: 22.5rem;
@@ -189,6 +191,19 @@ $translateX: 0;
 	    @include media-breakpoint-down(md) {
 	    	font-size: 16rem;
 	    }
+	}
+
+	@include media-breakpoint-down(md) {
+		padding: 8rem 1rem;
+
+		br {
+			display: none;
+		}
+		h2 {
+			font-size: 4rem;
+    		line-height: 1;
+    		margin-top: 0.2em;
+		}
 	}
 }
 
@@ -210,6 +225,10 @@ $translateX: 0;
 
 		@include media-breakpoint-down(md) {
 			padding: 5rem 1rem;
+
+			br {
+				display: none;
+			}
 		}
 	}
 }
@@ -224,7 +243,9 @@ $translateX: 0;
 		padding: 0 0.3em;
 		border: solid 2px $primary;
 	}
-
+	h2 {
+		line-height: 1.4;
+	}
 	.register {
 		display: block;
 		font-size: 1.7rem;
