@@ -147,7 +147,7 @@ $translateX: 0;
 }
 #navBar {
 	position: absolute;
-    top: 5em;
+    top: 6em;
     left: 2.5em;
     background: white;
     z-index: 99;
@@ -271,6 +271,10 @@ $translateX: 0;
 	img {
 		max-height: 100px;
 		width: auto;
+		padding: 0 1em;
+		&.aws {
+			max-height: 75px;
+		}
 	}
 
 	@include media-breakpoint-down(md) {
