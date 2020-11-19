@@ -267,6 +267,80 @@ $translateX: 0;
 	}
 }
 
+// Register Section
+
+form {
+	width: 768px !important;
+	margin: 0 auto;
+	font-family: MuseoSans-700 !important;
+
+	.mktoFormRow {
+		display: flex;
+
+		.mktoFormCol {
+			min-width: 50%;
+			min-height: 0;
+    		margin-bottom: 5px !important;
+
+    		@include media-breakpoint-down(md) {
+				min-width: 100%;
+			}
+		}
+		.mktoFieldWrap {
+			width: 100%;
+		}
+		.mktoGutter {
+			display: none;
+		}
+		.mktoLabel {
+			float: none;
+			width: 100% !important;
+			display: block;
+			padding: 0;
+    		margin-bottom: 0.5em;
+    		.mktoAsterix {
+    			display: none;
+    		}
+
+    		&#LblcitizenshipStatus {
+    			float: right;
+    			width: 90% !important;
+    		}
+    		&#LblmiscellaneousCheckbox1 {
+    			width: 90% !important;
+    		}
+		}
+		.mktoCheckboxList {
+			float: left;
+			width: 10% !important;
+		}
+		.mktoField {
+			border: solid 1px $secondary;
+			padding: 0.8em 1em !important;
+			width: 95% !important;
+		}
+		.mktoHtmlText {
+			width: 100% !important;
+		}
+	}
+	.mktoButtonRow {
+		width: 100%;
+		.mktoButtonWrap {
+			margin: 0 !important;
+			.mktoButton {
+				margin: 0 auto;
+				padding: 0.5em 1em !important;
+				background: transparent !important;
+				border: solid 2px $black !important;
+				color: $black !important;
+				text-transform: uppercase;
+				font-family: MuseoSans-900;
+				font-size: 1.2rem !important;
+			}
+		}
+	}
+	
+}
 // Logo Section
 
 .logos {
