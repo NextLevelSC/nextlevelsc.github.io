@@ -273,17 +273,22 @@ form {
 	width: 768px !important;
 	margin: 0 auto;
 	font-family: MuseoSans-700 !important;
-
+	@include media-breakpoint-down(md) {
+		width: 100% !important;
+	}
 	.mktoFormRow {
 		display: flex;
-
+		@include media-breakpoint-down(md) {
+			display: block;
+		}
 		.mktoFormCol {
 			min-width: 50%;
 			min-height: 0;
     		margin-bottom: 5px !important;
 
     		@include media-breakpoint-down(md) {
-				min-width: 100%;
+				min-width: 0;
+				width: 100%;
 			}
 		}
 		.mktoFieldWrap {
